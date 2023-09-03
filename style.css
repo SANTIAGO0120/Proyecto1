@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body {
+    font-family: 'Poppins';
+  }
+  
+  .header {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+  }
+
+ .navbar .logo {
+    color: rgb(35, 207, 35);
+    font-style: italic;
+  }
+  
+  .navbar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  
+  .navbar a {
+    color: black;
+  }
+  
+  .navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links ul {
+    display: flex;
+  }
+  
+  .navbar .nav-links ul li {
+    margin: 0 25px;
+  }
+  
+  .navbar .nav-links ul li.active a {
+    color: rgb(82, 212, 82);
+    font-weight: 600;
+  }
+  
+  .navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    width: 35px;
+    z-index: 3;
+  }
+  
+  .info {
+    width: 1200px;
+    height: 400px;
+    background-color: rgba(197, 179, 179, 0.1);
+    opacity: 0.8;
+    position: relative;
+    top: 150px;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  
+  .info .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .navbar {
+      padding: 0;
+      z-index: 2;
+    }
+  
+    .navbar .logo {
+      position: absolute;
+      top: 40px;
+      left: 30px;
+    }
+  
+    .navbar .menu-hamburger {
+      display: block;
+      z-index: 4;
+    }
+  
+    .nav-links {
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.295);
+      backdrop-filter: blur(8px);
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: -100%;
+      transition: all 0.5s ease;
+      z-index: 3;
+    }
+  
+    .nav-links.mobile-menu {
+      margin-left: 0;
+    }
+  
+    .nav-links ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar .nav-links ul li {
+      margin: 25px 0;
+      font-size: 1.2em;
+    }
+  
+    .info {
+      top: 180px;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  
